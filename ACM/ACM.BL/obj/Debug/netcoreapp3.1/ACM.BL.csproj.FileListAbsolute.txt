@@ -1,0 +1,9 @@
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/bin/Debug/netcoreapp3.1/ACM.BL.deps.json
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/bin/Debug/netcoreapp3.1/ACM.BL.dll
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/bin/Debug/netcoreapp3.1/ACM.BL.pdb
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/obj/Debug/netcoreapp3.1/ACM.BL.csprojAssemblyReference.cache
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/obj/Debug/netcoreapp3.1/ACM.BL.csproj.CoreCompileInputs.cache
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/obj/Debug/netcoreapp3.1/ACM.BL.AssemblyInfoInputs.cache
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/obj/Debug/netcoreapp3.1/ACM.BL.AssemblyInfo.cs
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/obj/Debug/netcoreapp3.1/ACM.BL.dll
+/Users/karthik.iyer/OneDrive_Slalom/TechTraining/NET_Training/C# Projects/CS_OOPS/ACM/ACM.BL/obj/Debug/netcoreapp3.1/ACM.BL.pdb
