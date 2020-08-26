@@ -14,6 +14,7 @@
       <e p="ACM.BL" t="IncludeRecursive">
         <e p="ACM.BL.csproj" t="IncludeRecursive" />
         <e p="Address.cs" t="Include" />
+        <e p="AddressRepository.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Customer.cs" t="Include" />
         <e p="CustomerRepository.cs" t="Include" />

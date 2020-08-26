@@ -1,7 +1,17 @@
+using System.Linq;
+
 namespace ACM.BL
 {
     public class CustomerRepository
     {
+
+        private AddressRepository addressRepository { get; set; }
+
+        public CustomerRepository()
+        {
+            //Collaborative relationship
+            addressRepository = new AddressRepository();
+        }
 
         /// <summary>
         /// Retrive a Customer by CustomerId
@@ -20,6 +30,7 @@ namespace ACM.BL
                     FirstName = "Test First",
                     LastName = "Test Last",
                     EmailAddress = "Test@test.com",
+                    AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList()
                 };
             }
 
