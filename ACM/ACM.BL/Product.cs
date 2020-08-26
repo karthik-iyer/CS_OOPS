@@ -43,21 +43,5 @@ namespace ACM.BL
 
             return isValid;
         }
-
-        public Product Retrieve(int productId)
-        {
-            return new Product(productId);
-        }
-
-        public List<Product> Retrieve()
-        {
-            return new List<Product>();
-        }
-
-        public void Save()
-        {
-
-        }
-
     }
 }

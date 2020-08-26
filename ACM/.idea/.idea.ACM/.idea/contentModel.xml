@@ -13,8 +13,10 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="ACM.BL" t="IncludeRecursive">
         <e p="ACM.BL.csproj" t="IncludeRecursive" />
+        <e p="Address.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Customer.cs" t="Include" />
+        <e p="CustomerRepository.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -24,11 +26,15 @@
         </e>
         <e p="Order.cs" t="Include" />
         <e p="OrderItem.cs" t="Include" />
+        <e p="OrderRepository.cs" t="Include" />
         <e p="Product.cs" t="Include" />
+        <e p="ProductRepository.cs" t="Include" />
       </e>
       <e p="ACM.BLTests" t="IncludeRecursive">
         <e p="ACM.BLTests.csproj" t="IncludeRecursive" />
+        <e p="AddressTest.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CustomerRepositoryTest.cs" t="Include" />
         <e p="CustomerTest.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -38,7 +44,9 @@
           </e>
         </e>
         <e p="OrderItemTest.cs" t="Include" />
+        <e p="OrderRepositoryTest.cs" t="Include" />
         <e p="OrderTest.cs" t="Include" />
+        <e p="ProductRepositoryTest.cs" t="Include" />
         <e p="ProductTest.cs" t="Include" />
       </e>
       <e p="ACM.sln" t="IncludeFlat" />
