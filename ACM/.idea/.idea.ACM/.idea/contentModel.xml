@@ -54,6 +54,8 @@
       <e p="ACM.Common" t="IncludeRecursive">
         <e p="ACM.Common.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ILog.cs" t="Include" />
+        <e p="LoggingService.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -66,6 +68,7 @@
       <e p="ACM.CommonTests" t="IncludeRecursive">
         <e p="ACM.CommonTests.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="LoggingServiceTests.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

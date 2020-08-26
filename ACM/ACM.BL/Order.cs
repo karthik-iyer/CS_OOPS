@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ACM.BL
 {
-    public class Order : EntityBase
+    public class Order : EntityBase, ILog
     {
         public DateTimeOffset? OrderDate { get; set; }
 
@@ -29,5 +30,7 @@ namespace ACM.BL
         {
             return !(OrderDate == null);
         }
+
+        public string Log() => $" Status: {EntityState.ToString()} , {OrderId} : {OrderDate} , { string.Concat(OrderItems.Select(x => x.ToString() + Environment.NewLine))}";
     }
 }

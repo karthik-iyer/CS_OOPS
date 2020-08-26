@@ -3,7 +3,7 @@ using ACM.Common;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILog
     {
         public int ProductId { get; }
 
@@ -55,5 +55,7 @@ namespace ACM.BL
         {
             return ProductName;
         }
+
+        public string Log() => $" Status: {EntityState.ToString()} , {ProductId} : {ProductName} , {CurrentPrice} , {Description}";
     }
 }

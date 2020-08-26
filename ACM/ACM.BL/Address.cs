@@ -1,6 +1,6 @@
 namespace ACM.BL
 {
-    public class Address : EntityBase
+    public class Address : EntityBase, ILog
     {
         public int AddressId { get; }
         public string StreetLine1 { get; set; }
@@ -36,5 +36,7 @@ namespace ACM.BL
                    !string.IsNullOrWhiteSpace(Country) &&
                    !string.IsNullOrWhiteSpace(AddressType);
         }
+
+        public string Log() => $" Status: {EntityState.ToString()} , {AddressType} : {StreetLine1} , {StreetLine2} , {City} , {State} - {PostalCode}, {Country}";
     }
 }

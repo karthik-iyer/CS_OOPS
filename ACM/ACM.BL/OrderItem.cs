@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class OrderItem
+    public class OrderItem : ILog
     {
         public int OrderItemId { get; }
 
@@ -54,9 +54,14 @@ namespace ACM.BL
             return new List<OrderItem>();
         }
 
-        public void Save()
+        public override string ToString()
         {
+            return $"{OrderItemId} , Product: {Product} , Quantity: {Quantity} , PurchasePrice: {PurchasePrice}";
+        }
 
+        public string Log()
+        {
+            return ToString();
         }
     }
 }
