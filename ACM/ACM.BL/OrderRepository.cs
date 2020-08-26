@@ -32,7 +32,28 @@ namespace ACM.BL
         /// <returns></returns>
         public bool Save(Order order)
         {
-            return true;
+            var success = true;
+
+            if (order.HasChanges)
+            {
+                if (order.IsValid)
+                {
+                    if (order.IsNew)
+                    {
+                        //Insert
+                    }
+                    else
+                    {
+                        //Update
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     }
 }

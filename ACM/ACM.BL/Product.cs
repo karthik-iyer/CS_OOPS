@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public int ProductId { get; }
 
@@ -22,7 +22,7 @@ namespace ACM.BL
             ProductId = productId;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
@@ -42,6 +42,11 @@ namespace ACM.BL
             }
 
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return ProductName;
         }
     }
 }

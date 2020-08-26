@@ -1,6 +1,6 @@
 namespace ACM.BL
 {
-    public class Address
+    public class Address : EntityBase
     {
         public int AddressId { get; }
         public string StreetLine1 { get; set; }
@@ -27,7 +27,7 @@ namespace ACM.BL
             AddressId = addressId;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             return !string.IsNullOrWhiteSpace(StreetLine1) &&
                    !string.IsNullOrWhiteSpace(City)  &&

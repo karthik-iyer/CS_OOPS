@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public DateTimeOffset? OrderDate { get; set; }
 
@@ -25,7 +25,7 @@ namespace ACM.BL
             OrderId = orderId;
             OrderItems = new List<OrderItem>();
         }
-        public bool Validate()
+        public override bool Validate()
         {
             return !(OrderDate == null);
         }

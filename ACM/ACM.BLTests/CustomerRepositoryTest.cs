@@ -93,6 +93,65 @@ namespace ACM.Tests.ACM.BLTests
             actual.AddressList.Should().BeEquivalentTo(expected.AddressList);
         }
 
+        [Test]
+        public void Save_DoesNotHaveChanges_ReturnsTrue()
+        {
+            var customer = new Customer(1)
+            {
+                FirstName = "Test First",
+                LastName = "Test Last",
+                EmailAddress = "Test@test.com",
+                AddressList = new List<Address>()
+                {
+                    new Address()
+                    {
+                        StreetLine1 = "1233 Street",
+                        AddressType = "Work",
+                        City = "Houston",
+                        State = "Texas",
+                        Country = "US",
+                        PostalCode = "99999"
+                    }
+                }
+            };
+            var customerRepository = new CustomerRepository();
+            var expected = true;
 
+            var actual = customerRepository.Save(customer);
+
+            Assert.AreEqual(expected,actual);
+
+        }
+
+        [Test]
+        public void Save_IsNotValid_ReturnsFalse()
+        {
+            var customer = new Customer(1)
+            {
+                HasChanges = true,
+                FirstName = "Test First",
+                EmailAddress = "Test@test.com",
+                AddressList = new List<Address>()
+                {
+                    new Address()
+                    {
+                        StreetLine1 = "1233 Street",
+                        AddressType = "Work",
+                        City = "Houston",
+                        State = "Texas",
+                        Country = "US",
+                        PostalCode = "99999"
+                    }
+                }
+            };
+
+            var customerRepository = new CustomerRepository();
+            var expected = false;
+
+            var actual = customerRepository.Save(customer);
+
+            Assert.AreEqual(expected,actual);
+
+        }
     }
 }

@@ -38,5 +38,39 @@ namespace ACM.Tests.ACM.BLTests
             Assert.IsNull(actual);
         }
 
+        [Test]
+        public void Save_DoesNotHaveChanges_ReturnsTrue()
+        {
+            var order = new Order(1)
+            {
+                HasChanges = true,
+                OrderDate = new DateTimeOffset(DateTime.Today)
+            };
+            var orderRepository = new OrderRepository();
+            var expected = true;
+
+            var actual = orderRepository.Save(order);
+
+            Assert.AreEqual(expected,actual);
+
+        }
+
+        [Test]
+        public void Save_IsNotValid_ReturnsFalse()
+        {
+            var order = new Order(1)
+            {
+                HasChanges = true,
+                OrderDate = null
+            };
+
+            var orderRepository = new OrderRepository();
+            var expected = false;
+
+            var actual = orderRepository.Save(order);
+
+            Assert.AreEqual(expected,actual);
+
+        }
     }
 }

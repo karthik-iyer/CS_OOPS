@@ -16,12 +16,15 @@ namespace ACM.BL
 
             if (productId == 1)
             {
-                return new Product(productId)
+              var product =  new Product(productId)
                 {
                    Description = "Test Product",
                    CurrentPrice = 1.0m,
                    ProductName = "Test Product"
                 };
+
+              Console.WriteLine($"Product: {product}");
+              return product;
             }
 
             return null;
@@ -34,7 +37,28 @@ namespace ACM.BL
         /// <returns></returns>
         public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        //Insert
+                    }
+                    else
+                    {
+                        //Update
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     }
 }

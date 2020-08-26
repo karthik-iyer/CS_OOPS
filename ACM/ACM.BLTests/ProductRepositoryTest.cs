@@ -42,5 +42,43 @@ namespace ACM.Tests.ACM.BLTests
             Assert.IsNull(actual);
         }
 
+        [Test]
+        public void Save_DoesNotHaveChanges_ReturnsTrue()
+        {
+            var product = new Product()
+            {
+                HasChanges = false,
+                Description = "Test Product",
+                CurrentPrice = 1.0m,
+                ProductName = "Test Product",
+                EntityState = EntityStateOption.Active,
+            };
+            var productrepository = new ProductRepository();
+            var expected = true;
+
+            var actual = productrepository.Save(product);
+
+            Assert.AreEqual(expected,actual);
+
+        }
+
+        [Test]
+        public void Save_IsNotValid_ReturnsFalse()
+        {
+            var product = new Product()
+            {
+                HasChanges = true,
+                Description = "Test Product",
+                CurrentPrice = 1.0m,
+                EntityState = EntityStateOption.Active,
+            };
+            var productRepository = new ProductRepository();
+            var expected = false;
+
+            var actual = productRepository.Save(product);
+
+            Assert.AreEqual(expected,actual);
+
+        }
     }
 }
