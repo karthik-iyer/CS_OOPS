@@ -51,6 +51,30 @@
         <e p="ProductRepositoryTest.cs" t="Include" />
         <e p="ProductTest.cs" t="Include" />
       </e>
+      <e p="ACM.Common" t="IncludeRecursive">
+        <e p="ACM.Common.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ACM.Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="StringHandler.cs" t="Include" />
+      </e>
+      <e p="ACM.CommonTests" t="IncludeRecursive">
+        <e p="ACM.CommonTests.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="ACM.CommonTests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="StringHandlerTests.cs" t="Include" />
+      </e>
       <e p="ACM.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Tests" t="Include" />

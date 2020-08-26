@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ACM.Common;
 
 namespace ACM.BL
 {
@@ -6,7 +7,13 @@ namespace ACM.BL
     {
         public int ProductId { get; }
 
-        public string ProductName { get; set; }
+        private string _productName;
+        public string ProductName
+        {
+            get => _productName.InsertSpaces();
+
+            set => _productName = value;
+        }
 
         public string Description { get; set; }
 
